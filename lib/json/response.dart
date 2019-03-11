@@ -1,3 +1,8 @@
+/*
+* author: Harsh Kukreja
+* This file is used to decode the JSON file which is coming from the API call
+* */
+
 import 'package:json_annotation/json_annotation.dart';
 
 
@@ -10,6 +15,7 @@ class BaseResponse extends Object{
   final String message;
   final String cod;
   final int count;
+  //In the JSON file the name is list and we have given variable name cities so a @JsonKey() is required to tell the key is list and not cities
   @JsonKey(name: "list")
   final List<City> cities;
 

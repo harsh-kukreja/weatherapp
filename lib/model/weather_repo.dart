@@ -1,3 +1,7 @@
+/*
+* author: Harsh Kukreja
+* This class is used to connect to API
+* */
 import 'dart:async';
 import 'dart:convert';
 

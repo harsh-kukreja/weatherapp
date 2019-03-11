@@ -1,3 +1,8 @@
+/*
+* author: Harsh Kukreja
+* This class is used to get elements and then set them
+* */
+
 import 'package:weatherapp/json/response.dart';
 
 
@@ -18,12 +23,13 @@ class WeatherModel{
       this.icon,
       this.lat, this.long);
 
+
+
   WeatherModel.fromResponse(City response)
       :city = response.name,
       temperature = (response.main.temp - 273.15).ceil(),
       description = response.weather[0].description,
-        rain =1,
-  lat = response.coord.lat,
-  icon = response.weather[0]?.icon,
-  long = response.coord.lon;
+      rain =1,
+      lat = response.coord.lat, icon = response.weather[0]?.icon,
+      long = response.coord.lon;
 }

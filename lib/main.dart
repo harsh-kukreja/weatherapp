@@ -1,3 +1,7 @@
+/*
+*author: Harsh Kukreja
+*
+* */
 import 'package:flutter/material.dart';
 
 import 'package:weatherapp/model/weather_repo.dart';
@@ -9,8 +13,7 @@ import 'package:rx_widgets/rx_widgets.dart';
 
 import 'package:http/http.dart' as http;
 void main() {
-  
-  
+
   final repo = WeatherRepo(client: http.Client());
   final modelCommand = ModelCommand(repo);
   print("Inside main");
@@ -259,7 +262,6 @@ class _SliderItemState extends State<SliderItem> {
       onChanged: (item){
         setState(() {
           sliderState =item;
-
         });
         command(item);
       },

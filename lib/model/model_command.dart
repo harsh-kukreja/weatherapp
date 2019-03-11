@@ -1,7 +1,11 @@
+/*
+* author: Harsh Kukreja
+*   This class uses RxCommand (Reactive Extension Command) which capsules a given handler function that can then be executed by its execute method or directly assigned to a widget's handler because it's a callable class. The result of this method is then published through its Observable interface
+* */
+
 import 'package:rx_command/rx_command.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:rxdart/rxdart.dart';
-// import 'package:rxdart/streams.dart';
 
 import 'package:weatherapp/model/model.dart';
 import 'package:weatherapp/model/weather_repo.dart';
@@ -13,7 +17,6 @@ class ModelCommand {
   final RxCommand<void, bool> getGpsCommand;
   final RxCommand<bool, bool> radioCheckedCommand;
   final RxCommand<int, void> addCitiesCommand;
-  //final RxCommand<String, void> changeLocaleCommand;
   final RxCommand<dynamic, Position> updateLocationCommand;
 
   ModelCommand._(
@@ -23,7 +26,7 @@ class ModelCommand {
       this.radioCheckedCommand,
       this.addCitiesCommand,
       this.updateLocationCommand,
-      //this.changeLocaleCommand,
+
       );
 
   factory ModelCommand(WeatherRepo repo) {
@@ -31,8 +34,7 @@ class ModelCommand {
 
     final _radioCheckedCommand = RxCommand.createSync<bool, bool>((b) => b);
 
-    //final _changeLocaleCommand =
-    //RxCommand.createSyncNoResult<String>(repo.setLanguage);
+
 
     //Two Observables needed because they are only cold observables (single subscription).
     final _boolCombineA =
@@ -52,7 +54,7 @@ class ModelCommand {
 
     _updateLocationCommand.listen((data) => _updateWeatherCommand(data));
 
-    // _updateWeatherCommand(null);
+
 
     return ModelCommand._(
       repo,
@@ -61,11 +63,9 @@ class ModelCommand {
       _radioCheckedCommand,
       _addCitiesCommand,
       _updateLocationCommand,
-      //_changeLocaleCommand,
     );
   }
 }
-
 class CombineObs {
   final Observable<bool> _combinedObservable;
   Observable<bool> get combinedObservable => _combinedObservable;
