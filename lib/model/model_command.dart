@@ -7,8 +7,8 @@ import 'package:rx_command/rx_command.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:rxdart/rxdart.dart';
 
-import 'package:weatherapp/model/model.dart';
-import 'package:weatherapp/model/weather_repo.dart';
+import 'package:Forecasto/model/model.dart';
+import 'package:Forecasto/model/weather_repo.dart';
 
 class ModelCommand {
   final WeatherRepo weatherRepo;

@@ -15,8 +15,8 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="weatherapp"
-        android:icon="@mipmap/launcher_icon">
+        android:label="Forecasto"
+        android:icon="@mipmap/ic_launcher">
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity
             android:name=".MainActivity"

@@ -4,10 +4,10 @@
 * */
 import 'package:flutter/material.dart';
 
-import 'package:weatherapp/model/weather_repo.dart';
-import 'package:weatherapp/model/model_command.dart';
-import 'package:weatherapp/model/model.dart';
-import 'package:weatherapp/model/model_provider.dart';
+import 'package:Forecasto/model/weather_repo.dart';
+import 'package:Forecasto/model/model_command.dart';
+import 'package:Forecasto/model/model.dart';
+import 'package:Forecasto/model/model_provider.dart';
 
 import 'package:rx_widgets/rx_widgets.dart';
 

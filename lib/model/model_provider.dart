@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
-import 'package:weatherapp/model/model_command.dart';
+import 'package:Forecasto/model/model_command.dart';
 
 class ModelProvider extends InheritedWidget{
   final ModelCommand modelCommand;

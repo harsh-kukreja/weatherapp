@@ -7,9 +7,9 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
-import 'package:weatherapp/json/response.dart';
-import 'package:weatherapp/model/model.dart';
-import 'package:weatherapp/const.dart';
+import 'package:Forecasto/json/response.dart';
+import 'package:Forecasto/model/model.dart';
+import 'package:Forecasto/const.dart';
 
 class WeatherRepo{
   final http.Client client;

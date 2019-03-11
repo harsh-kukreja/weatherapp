@@ -1,4 +1,4 @@
-name: weatherapp
+name: Forecasto
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -24,6 +24,8 @@ dependencies:
   rx_command: ^4.2.0
   geolocator: ^3.0.0
   rx_widgets: ^2.2.0
+
+
 
 
 

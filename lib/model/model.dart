@@ -3,7 +3,7 @@
 * This class is used to get elements and then set them
 * */
 
-import 'package:weatherapp/json/response.dart';
+import 'package:Forecasto/json/response.dart';
 
 
 class WeatherModel{
